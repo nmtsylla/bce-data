@@ -95,7 +95,7 @@ module.exports =Scraper;
   my.Detail = function(){
     var self =this
     fs.readFile('data/link.json', function (err, data) {
-      if (err){throw err}
+      if (err){ console.log("Lancer le script avec l'option '-a url' d'abord!");process.exit(1); }
       var lines = data.toString().split('\n')
       lines = _.filter(lines, function(line) {
         return (line && line.length >0)
