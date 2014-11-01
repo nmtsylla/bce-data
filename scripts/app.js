@@ -6,4 +6,4 @@ if(argv.a == 'url'){
 }else if(argv.a == 'detail')
 	main = Scraper.Detail()
 	else
-		console.log("Pas d'argument");
+		console.log("Veuillez passer l'argument '-a url' pour des données sommaire en remier puis avec '-a detail' pour avoir plus d'infos");
