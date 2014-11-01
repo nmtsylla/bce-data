@@ -63,7 +63,7 @@ module.exports =Scraper;
         data.push(parse)
       })
       console.log(data)
-      my.WriteFile('datas/link.json', data.join('\n'))
+      my.WriteFile('data/link.json', data.join('\n'))
     }
 
     // parse body 
@@ -94,7 +94,7 @@ module.exports =Scraper;
 
   my.Detail = function(){
     var self =this
-    fs.readFile('datas/link.json', function (err, data) {
+    fs.readFile('data/link.json', function (err, data) {
       if (err){throw err}
       var lines = data.toString().split('\n')
       lines = _.filter(lines, function(line) {
@@ -111,8 +111,8 @@ module.exports =Scraper;
         data.push( result[0] + ',' +  self.parseBody(result[1]))
       })
       console.log(data)
-      my.WriteFile('datas/data.csv', conf.head )
-      my.WriteFile('datas/data.csv', data.join('\n'))
+      my.WriteFile('data/data.csv', conf.head )
+      my.WriteFile('data/data.csv', data.join('\n'))
     }
     // parse body 
     this.parseBody = function(body){
